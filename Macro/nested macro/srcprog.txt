@@ -1,0 +1,38 @@
+	macro
+	incr2	&l	&m	&rg
+	print	&m
+	add	&rg	&m
+	sub	&rg	&l
+	mend
+	macro
+	incr	&x	&y	&reg
+	add	&reg	&x
+	sub	&reg	&y
+	incr2	&x	&y	&reg
+	print	&reg
+	mend
+	macro
+	incr1	&z	&reg
+	print	&z
+	mover	&reg	&z
+	mend
+	start	200
+a	ds	2
+b	dc	3
+c	ds	1
+	read	a
+	read	c
+	mover	areg	'=9'
+result	add	areg	'=5'
+	sub	creg	a
+	incr	a	c	areg
+	movem	areg	'=7'
+d	ds	1
+	ltorg
+		'=5'
+		'=4'
+	print	result
+	incr1	b	dreg
+	sub	breg	'=3'
+	stop
+	end

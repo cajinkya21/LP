@@ -1,0 +1,12 @@
+100	print	&m
+101	add	&rg	&m
+102	sub	&rg	&l
+103	mend
+104	add	&reg	&x
+105	sub	&reg	&y
+106	incr2	&x	&y	&reg
+107	print	&reg
+108	mend
+109	print	&z
+110	mover	&reg	&z
+111	mend

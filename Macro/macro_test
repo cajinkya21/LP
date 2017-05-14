@@ -1,0 +1,35 @@
+macro
+incr	&mem,	&incr,	&reg,	&why=ram,	&hello=
+	mover	&reg,	&mem
+	add	&reg,	&incr
+	movem	&reg,	&mem
+mend
+
+
+macro
+clearmem	&x,	&n,	&reg=
+	lcl	&m
+&m	set	0
+	mover	&reg,	="0"
+.more	movem	&reg,	&x+&m
+&m	set	&m+1
+	aif	(&m ne n)	.more
+mend
+
+	start	100
+	mover	areg	"=5"
+	mover	areg	x
+l1	mover	breg	"=2"
+	mover	creg	y
+	origin	l1+3
+	ltorg
+	incr	a	b	c		
+	add	areg	"=1"	"=2"
+	sub	breg	"=2"
+	ltorg
+	equ	l1
+	origin	next+5
+d
+	stop
+x	ds	1	3
+	end

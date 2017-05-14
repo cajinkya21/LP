@@ -1,0 +1,15 @@
+# [ID: include]  [Relational op: <] [ID: stdio] [flo const: .] [ID: h] [Relational op: >]
+# [ID: include]  [Relational op: <] [ID: stdlib] [flo const: .] [ID: h] [Relational op: >]
+ [K: int]   [ID: main] (){
+	
+	 [K: char]  [ArOP: *] [ID: a] [CommaOP: ,] [ArOP: *] [ID: b] [EOS: ;]
+	 [K: int]   [ID: i] [AsgOP: =][int const: 0][CommaOP: ,]  [ID: d] [AsgOP: =][int const: 0][EOS: ;]
+	 [K: char]  [ArOP: *] [ID: c] [CommaOP: ,] [ArOP: *] [ID: e] [EOS: ;]
+	 [ID: c]  [AsgOP: =] [Stg const: "hello"][EOS: ;]
+	 [ID: c]  [AsgOP: =]  [ID: a]  [AsgOP: =] ( [K: char]  [ArOP: *]) [ID: malloc] ([int const: 10])[EOS: ;]
+	 [ID: e]  [AsgOP: =]  [ID: b]  [AsgOP: =] ( [K: char]  [ArOP: *]) [ID: malloc] ([int const: 10])[EOS: ;]
+	 [ID: scanf] ([Stg const: "%s"][CommaOP: ,] [ID: a] )[EOS: ;]
+	 [ID: scanf] ([Stg const: "%s"][CommaOP: ,] [ID: b] )[EOS: ;]
+	 [K: return]  [int const: 0][EOS: ;]
+}
+Done scanning

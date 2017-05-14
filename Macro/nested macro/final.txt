@@ -1,0 +1,26 @@
+	start	200
+a	ds	2
+b	dc	3
+c	ds	1
+	read	a
+	read	c
+	mover	areg	'=9'
+result	add	areg	'=5'
+	sub	creg	a
+	add	areg	a
+	sub	areg	c
+	print	c
+	add	areg	c
+	sub	areg	a
+	print	areg
+	movem	areg	'=7'
+d	ds	1
+	ltorg
+		'=5'
+		'=4'
+	print	result
+	print	b
+	mover	dreg	b
+	sub	breg	'=3'
+	stop
+	end

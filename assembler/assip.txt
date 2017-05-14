@@ -1,0 +1,9 @@
+mov ax num1
+
+mov num1 num2
+
+halt
+
+num1 db
+ 
+num2 dw
